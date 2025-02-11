@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title productos
+  body
+    h1 Detectar el ID del producto a eliminar
+    form(action="/eliminacionInterna", method='post')
+      label(for='id') Identificacion:
+      input(type='text', name='id')
+      br
+      input(type='submit', value='Guardar')

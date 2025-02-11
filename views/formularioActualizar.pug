@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title productos hoy 2 de agosto 24
+    link(rel='stylesheet', href='style.css', type='text/css')
+  body
+    h1 Cual es el id del producto que desea actualizar hoy 2 de agosto 24
+    form(action='/actualizarDatos', method='post')
+      label(for='id') Id del producto a actualizar:
+      input(type='text', name='id')
+      br
+      label(for='existencias') Existencias:
+      input(type='number', name='existencias')
+      br
+      input(type='submit', value='Guardar')

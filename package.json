@@ -1,0 +1,20 @@
+{
+  "name": "carpetabasedatosjose1",
+  "version": "1.0.0",
+  "description": "para practicar ",
+  "main": "index.js",
+  "scripts": {
+    "Start":"node index",
+    "dev":"nodemon index"
+  },
+  "author": "jose",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "mongose": "^0.0.2-security",
+    "nodemon": "^3.1.4",
+    "pug": "^3.0.3"
+  }
+}

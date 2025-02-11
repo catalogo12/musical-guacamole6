@@ -1,0 +1,19 @@
+//carpetaBaseDatosJose1(mongodb)-formulario.pug
+doctype html
+html
+  head
+    title productos hoy 11 febrero 2025
+    link(rel='stylesheet', href='style.css', type='text/css')
+  body
+    h1 Cargar productos al catalogo hoy 11 febrero 2025
+    form(action='/anadirDatos', method='post')
+      label(for='id') Identificación:
+      input(type='text', name='id')
+      br
+      label(for='nombre') Producto:
+      input(type='text', name='nombre')
+      br
+      label(for='existencias') Existencias:
+      input(type='number', name='existencias')
+      br
+      input(type='submit', value='Guardar')
