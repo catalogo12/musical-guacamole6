@@ -12,7 +12,12 @@ const tablaJose1Schema= new mongoose.Schema({
         existencias:Number
       });
 const azul = mongoose.model("azul",tablaJose1Schema);
+
 const bodyParser = require("body-parser");
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 //ruta para mostrar formulario para cargar productos
 app.get("/productosRuta", (req, res) => {
