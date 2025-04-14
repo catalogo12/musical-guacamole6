@@ -1,7 +1,7 @@
 //carpetaBaseDatosJose1
 const mongoose = require('mongoose');
-const mongoURI = process.env.MONGO_URI || 'mongodb://mongo:SYgRWOFxbzNyZlISrgInYKrgKJizzXKm@mongodb.railway.internal:27017';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology:.then(()=> console.log('Conexión exitosa a MongoDB')).catch(err => console.error('Error al conectar a MongoDB:', errr));
+const mongoURI = process.env.MONGO_URL || 'mongodb://mongo:SYgRWOFxbzNyZlISrgInYKrgKJizzXKm@mongodb.railway.internal:27017';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology:true,}).then(()=> console.log('Conexión exitosa a MongoDB')).catch(err => console.error('Error al conectar a MongoDB:', errr));
 //const mongoURL = 'mongodb+srv://usuario:
 
 //mongoose.connect('mongodb://127.0.0.1:27017/baseDatosJose1');
@@ -9,7 +9,7 @@ const express = require("express");
 const app=express();
 const cors = require("cors");
 const path = require("path");
-const port = 3000
+const port = process.env.PORT || 3000
 const tablaJose1Schema= new mongoose.Schema({
         id:Number,
         nombre:String,
