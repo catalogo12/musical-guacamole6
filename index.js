@@ -1,10 +1,20 @@
 //carpetaBaseDatosJose1
 const mongoose = require('mongoose');
-const mongoURI = process.env.MONGO_URL || 'mongodb://mongo:SYgRWOFxbzNyZlISrgInYKrgKJizzXKm@mongodb.railway.internal:27017';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology:true,}).then(()=> console.log('Conexión exitosa a MongoDB')).catch(err => console.error('Error al conectar a MongoDB:', errr));
+//const mongoURI = process.env.MONGO_URL || 'mongodb://mongo:SYgRWOFxbzNyZlISrgInYKrgKJizzXKm@mongodb.railway.internal:27017';
+//mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology:true,}).then(()=> console.log('Conexión exitosa a MongoDB')).catch(err => console.error('Error al conectar a MongoDB:', errr));
 //const mongoURL = 'mongodb+srv://usuario:
 
 //mongoose.connect('mongodb://127.0.0.1:27017/baseDatosJose1');
+//mongodb
+mongoose.connect('mongodb://mongo:27017/todo_express',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+
+    })
+    .then(() => console.log('MongoDB Conectada'))
+    .catch(err => console.log(err)
+);
 const express = require("express");
 const app=express();
 const cors = require("cors");
